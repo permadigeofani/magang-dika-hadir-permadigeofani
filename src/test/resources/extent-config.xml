@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <theme>standard</theme>
+        <encoding>UTF-8</encoding>
+        <documentTitle>Extent Report - Kelompok 2</documentTitle>
+        <reportName>Pengujian SauceDemo</reportName>
+        <timestampFormat>dd MMMM yyyy, HH:mm:ss</timestampFormat>
+        <maxLogSize>5MB</maxLogSize>
+    </configuration>
+</extentreports>
