@@ -1,11 +1,15 @@
 package com.juaracoding.kelompok2.drivers.utils;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.logging.Logger;
 
 import static com.juaracoding.kelompok2.drivers.utils.Constants.TIMEOUT;
@@ -86,7 +90,7 @@ public class Utils {
 
     public static boolean waitUntilClickableAndClick(WebDriver driver, WebElement element) {
         WebDriverWait wait = createWait(driver);
-        int retryCount = 0;
+        int retryCount = 3;
 
         while (retryCount <= MAX_RETRY) {
             try {
@@ -183,4 +187,19 @@ public class Utils {
         String actualText = getText(driver, locator);
         return actualText.contains(expectedText);
     }
+
+    private static ExtentReports extent;
+
+    public static ExtentReports getExtentReports() {
+        if (extent == null) {
+            String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+            String reportPath = "target/extent-report-" + timestamp + ".html";
+
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
+            extent = new ExtentReports();
+            extent.attachReporter(sparkReporter);
+        }
+        return extent;
+    }
+
 }

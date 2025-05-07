@@ -9,7 +9,6 @@ import java.net.MalformedURLException;
 
 public class Hook {
 
-
     @BeforeAll
     public static void initialize() throws MalformedURLException {
         DriverSingleton.getDriver(BrowserType.CHROME);
@@ -17,12 +16,12 @@ public class Hook {
     }
     @BeforeStep
     public void beforeStep() {
-        Utils.delay(2);
+        Utils.delay(1);
     }
 
     @AfterStep
     public void afterStep() {
-        Utils.delay(2);
+        Utils.delay(1);
     }
 
     @AfterAll

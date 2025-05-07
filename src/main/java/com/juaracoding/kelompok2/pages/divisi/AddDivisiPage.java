@@ -17,8 +17,9 @@ public class AddDivisiPage {
     @FindBy(css = "input#name[name='name'][placeholder='Nama Divisi']")
     private WebElement inputNamaDivisi;
 
-    @FindBy(xpath = "//button[normalize-space(text())='Tambah']")
+    @FindBy(xpath = "//div[contains(@class, 'MuiDialogActions-root')]//button[text()='Tambah']")
     private WebElement btnTambah;
+
 
     @FindBy(css = "button[normalize-space(text())='Batal']")
     private WebElement btnBatal;

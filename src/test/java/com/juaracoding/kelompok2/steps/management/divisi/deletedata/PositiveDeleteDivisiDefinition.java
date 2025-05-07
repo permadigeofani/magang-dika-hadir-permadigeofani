@@ -50,11 +50,6 @@ public class PositiveDeleteDivisiDefinition {
     public void divisiWithNameShouldBeDeletedSuccessfully(String divisiName) {
         filteringDivisiPage.searchDivisi(divisiName).clickSearchButton();
 
-        // Verifikasi bahwa divisi sebelumnya memang ada
-        boolean isDivisiAdaSebelumnya = filteringDivisiPage.isDivisiFound(divisiName);
-        Assert.assertTrue(isDivisiAdaSebelumnya, "Divisi '" + divisiName + "' seharusnya muncul sebelum dihapus.");
-
-        // Verifikasi bahwa divisi sudah tidak ada setelah dihapus
         boolean isDivisiMasihAda = deleteDivisiPage.isDivisiListed(divisiName);
         Assert.assertFalse(isDivisiMasihAda, "Divisi '" + divisiName + "' seharusnya sudah terhapus.");
     }

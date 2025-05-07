@@ -1,0 +1,1477 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Mei 7, 2025 12:23:53 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$50%'>
+                    <span class='strong'>4</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>
+                    4</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='60%'>
+                    <span class='strong'>9</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='40%'>
+                    6</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='89%'>
+                    <span class='strong'>79</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='6%'>
+                    6</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='3%'>
+                    3</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Negative Delete Divisi Test Cases</span>
+						<span class='test-time'>Mei 7, 2025 12:23:54 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 00 18.121</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Cancels delete a divisi</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='13' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='16' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSearchesForDivisiWithName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User searches for divisi with name "Public Relations"</div>
+
+
+		</li>
+		<li test-id='19' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userClicksTheSearchButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the search button</div>
+
+
+		</li>
+		<li test-id='22' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.PositiveDeleteDivisiDefinition.userClicksTheThreeDotButtonForTheDivisi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the three dot button for the divisi "Public Relations"</div>
+
+
+		</li>
+		<li test-id='25' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.PositiveDeleteDivisiDefinition.userSelectsTheDeleteOptionFromTheMenu())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User selects the delete option from the menu</div>
+
+
+		</li>
+		<li test-id='28' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.PositiveDeleteDivisiDefinition.aConfirmationPopupForDeletingDivisiShouldAppear(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A confirmation popup for deleting divisi should appear with message containing "Public Relations"</div>
+
+
+		</li>
+		<li test-id='31' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.NegativeDeleteDivisiDefinition.userCancelsDeletionByClickingTidak())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User cancels deletion by clicking Tidak</div>
+
+
+		</li>
+		<li test-id='34' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.NegativeDeleteDivisiDefinition.divisiShouldStillBeListed(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Divisi "Public Relations" should still be listed</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>Negative Edit Divisi Test Cases</span>
+						<span class='test-time'>Mei 7, 2025 12:24:12 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='37' status='fail'>
+
+	<span class='duration right label'>00 00 27.806</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Edit division name to empty</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='48' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='51' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSearchesForDivisiWithName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User searches for divisi with name "Public Relations"</div>
+
+
+		</li>
+		<li test-id='54' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userClicksTheSearchButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the search button</div>
+
+
+		</li>
+		<li test-id='57' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userClicksTheThreeDotButtonForDivisi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the three dot button for divisi "Public Relations"</div>
+
+
+		</li>
+		<li test-id='60' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userClicksTheEditButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the "Edit" button</div>
+
+
+		</li>
+		<li test-id='63' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userEditsTheDivisiNameTo(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User edits the divisi name to "  "</div>
+
+
+		</li>
+		<li test-id='66' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userClicksTheSimpanButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the "Simpan" button</div>
+
+
+		</li>
+		<li test-id='69' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.NegativeEditDivisiDefinition.aValidationMessageShouldAppearForEmptyDivisiName())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then A validation message should appear for empty divisi name</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading 'validationMessage')
+  (Session info: chrome=135.0.7049.116)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2325e95c4de024128b57cffbcd7202f8, executeScript {script=return arguments[0].validationMessage;, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/vc/kxrddmpx7w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49418/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2325e95c4de024128b57cffbcd7202f8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at com.juaracoding.kelompok2.pages.divisi.EditDivisiPage.getValidationMessageOfNamaDivisi(EditDivisiPage.java:112)
+	at com.juaracoding.kelompok2.steps.management.divisi.editdata.NegativeEditDivisiDefinition.aValidationMessageShouldAppearForEmptyDivisiName(NegativeEditDivisiDefinition.java:28)
+	at ✽.A validation message should appear for empty divisi name(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/EditDivisiNegative.feature:13)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='71' status='fail'>
+
+	<span class='duration right label'>00 00 17.719</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Edit division name to already existing one</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='82' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='85' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSearchesForDivisiWithName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User searches for divisi with name "Public Relations"</div>
+
+
+		</li>
+		<li test-id='88' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userClicksTheSearchButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the search button</div>
+
+
+		</li>
+		<li test-id='91' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userClicksTheThreeDotButtonForDivisi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the three dot button for divisi "Public Relations"</div>
+
+
+		</li>
+		<li test-id='94' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userClicksTheEditButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the "Edit" button</div>
+
+
+		</li>
+		<li test-id='97' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userEditsTheDivisiNameTo(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User edits the divisi name to "Public Relations"</div>
+
+
+		</li>
+		<li test-id='100' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userClicksTheSimpanButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the "Simpan" button</div>
+
+
+		</li>
+		<li test-id='103' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.NegativeAddDivisiDefinition.anErrorMessageShouldAppearIndicatingTheDivisiAlreadyExists(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then An error message should appear indicating the divisi "Public Relations" already exists</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=135.0.7049.116)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2325e95c4de024128b57cffbcd7202f8, findElement {using=css selector, value=div.MuiSnackbarContent-message:contains('sudah ada')}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/vc/kxrddmpx7w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49418/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2325e95c4de024128b57cffbcd7202f8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.juaracoding.kelompok2.drivers.utils.Utils.waitUntilVisible(Utils.java:71)
+	at com.juaracoding.kelompok2.drivers.utils.Utils.isElementVisible(Utils.java:84)
+	at com.juaracoding.kelompok2.pages.divisi.AddDivisiPage.isErrorMessageDuplicateDisplayed(AddDivisiPage.java:75)
+	at com.juaracoding.kelompok2.steps.management.divisi.adddata.NegativeAddDivisiDefinition.anErrorMessageShouldAppearIndicatingTheDivisiAlreadyExists(NegativeAddDivisiDefinition.java:53)
+	at ✽.An error message should appear indicating the divisi "Public Relations" already exists(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/EditDivisiNegative.feature:22)
+</textarea>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='105'>
+					<div class='test-heading'>
+						<span class='test-name'>Negative Add Divisi Test Cases</span>
+						<span class='test-time'>Mei 7, 2025 12:24:58 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='106' status='fail'>
+
+	<span class='duration right label'>00 00 21.536</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Add new divisi with empty divisi name</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='117' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='120' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahkanButtonToAddDivisi())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks on the Tambahkan button to add divisi</div>
+
+
+		</li>
+		<li test-id='123' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userInputsIntoTheNamaDivisiField(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User inputs "   " into the Nama Divisi field</div>
+
+
+		</li>
+		<li test-id='126' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on the Tambah button</div>
+
+
+		</li>
+		<li test-id='129' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.NegativeEditDivisiDefinition.aValidationMessageShouldAppearForEmptyDivisiName())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then A validation message should appear for empty divisi name</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading 'validationMessage')
+  (Session info: chrome=135.0.7049.116)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2325e95c4de024128b57cffbcd7202f8, executeScript {script=return arguments[0].validationMessage;, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/vc/kxrddmpx7w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49418/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2325e95c4de024128b57cffbcd7202f8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at com.juaracoding.kelompok2.pages.divisi.EditDivisiPage.getValidationMessageOfNamaDivisi(EditDivisiPage.java:112)
+	at com.juaracoding.kelompok2.steps.management.divisi.editdata.NegativeEditDivisiDefinition.aValidationMessageShouldAppearForEmptyDivisiName(NegativeEditDivisiDefinition.java:28)
+	at ✽.A validation message should appear for empty divisi name(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/addDivisiNegative.feature:10)
+</textarea>
+		</li>
+		<li test-id='132' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.NegativeAddDivisiDefinition.theDivisiShouldNotBeAdded(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And The divisi "   " should not be added</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='134' status='fail'>
+
+	<span class='duration right label'>00 00 13.587</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Add a new division with the same division name</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='145' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='148' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.NegativeAddDivisiDefinition.theDivisiAlreadyExistsInTheSystem(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And The divisi "Application Processing" already exists in the system</div>
+
+
+		</li>
+		<li test-id='151' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahkanButtonToAddDivisi())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks on the Tambahkan button to add divisi</div>
+
+
+		</li>
+		<li test-id='154' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userInputsIntoTheNamaDivisiField(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User inputs "Application Processing" into the Nama Divisi field</div>
+
+
+		</li>
+		<li test-id='157' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on the Tambah button</div>
+
+
+		</li>
+		<li test-id='160' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.NegativeAddDivisiDefinition.anErrorMessageShouldAppearIndicatingTheDivisiAlreadyExists(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then An error message should appear indicating the divisi "Application Processing" already exists</div>
+
+
+					<textarea disabled class="code-block">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=135.0.7049.116)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2325e95c4de024128b57cffbcd7202f8, findElement {using=css selector, value=div.MuiSnackbarContent-message:contains('sudah ada')}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/vc/kxrddmpx7w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49418/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2325e95c4de024128b57cffbcd7202f8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.juaracoding.kelompok2.drivers.utils.Utils.waitUntilVisible(Utils.java:71)
+	at com.juaracoding.kelompok2.drivers.utils.Utils.isElementVisible(Utils.java:84)
+	at com.juaracoding.kelompok2.pages.divisi.AddDivisiPage.isErrorMessageDuplicateDisplayed(AddDivisiPage.java:75)
+	at com.juaracoding.kelompok2.steps.management.divisi.adddata.NegativeAddDivisiDefinition.anErrorMessageShouldAppearIndicatingTheDivisiAlreadyExists(NegativeAddDivisiDefinition.java:53)
+	at ✽.An error message should appear indicating the divisi "Application Processing" already exists(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/addDivisiNegative.feature:18)
+</textarea>
+		</li>
+		<li test-id='163' class='node and Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.NegativeAddDivisiDefinition.theDivisiShouldNotBeAdded(java.lang.String))"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And The divisi "Application Processing" should not be added</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='165' status='pass'>
+
+	<span class='duration right label'>00 00 11.511</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Add new division with special characters in division name</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='176' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='179' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahkanButtonToAddDivisi())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks on the Tambahkan button to add divisi</div>
+
+
+		</li>
+		<li test-id='182' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userInputsIntoTheNamaDivisiField(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User inputs "@@@>###" into the Nama Divisi field</div>
+
+
+		</li>
+		<li test-id='185' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on the Tambah button</div>
+
+
+		</li>
+		<li test-id='188' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.theSuccessMessageAfterAddNewDivisiShouldDisplay(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The success message after add new divisi should display "Berhasil Menambahkan Divisi"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='190' status='pass'>
+
+	<span class='duration right label'>00 00 11.363</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User inputs with numbers and letter in Nama Divisi</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='201' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='204' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahkanButtonToAddDivisi())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks on the Tambahkan button to add divisi</div>
+
+
+		</li>
+		<li test-id='207' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userInputsIntoTheNamaDivisiField(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User inputs "=-07{[RrQMil%^5?$$<,$/" into the Nama Divisi field</div>
+
+
+		</li>
+		<li test-id='210' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on the Tambah button</div>
+
+
+		</li>
+		<li test-id='213' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.theSuccessMessageAfterAddNewDivisiShouldDisplay(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The success message after add new divisi should display "Berhasil Menambahkan Divisi"</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='215'>
+					<div class='test-heading'>
+						<span class='test-name'>Negative Filtering Divisi Test Cases</span>
+						<span class='test-time'>Mei 7, 2025 12:25:56 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='216' status='pass'>
+
+	<span class='duration right label'>00 00 19.287</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: searches for divisi with invalid characters</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='227' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='230' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.NegativeFilteringDivisiDefinition.userSearchesForDivisiWithCharacterName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User searches for divisi with character name "!@#$%"</div>
+
+
+		</li>
+		<li test-id='233' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userClicksTheSearchButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the search button</div>
+
+
+		</li>
+		<li test-id='236' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.NegativeFilteringDivisiDefinition.noDivisiShouldBeFound())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then No divisi should be found</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='238' status='fail'>
+
+	<span class='duration right label'>00 00 15.333</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: selects invalid number of rows per page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='249' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='252' class='node when Fail' status='Fail'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSelectsRowsPerPage(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When User selects "-5" rows per page</div>
+
+
+					<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because the return value of "com.juaracoding.kelompok2.drivers.utils.Utils.waitUntilVisible(org.openqa.selenium.WebDriver, org.openqa.selenium.By)" is null
+	at com.juaracoding.kelompok2.pages.divisi.FilteringDivisiPage.selectRowsPerPage(FilteringDivisiPage.java:48)
+	at com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSelectsRowsPerPage(PositiveFiteringDivisiDefinition.java:55)
+	at ✽.User selects "-5" rows per page(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/filteringDivisiNegative.feature:12)
+</textarea>
+		</li>
+		<li test-id='255' class='node then Skip' status='Skip'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.NegativeFilteringDivisiDefinition.systemShouldIgnoreOrShowValidationMessage())"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then System should ignore or show validation message</div>
+
+
+					<div class="node-step">Step skipped</div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='257'>
+					<div class='test-heading'>
+						<span class='test-name'>Add Divisi - Positive Case</span>
+						<span class='test-time'>Mei 7, 2025 12:26:30 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='258' status='pass'>
+
+	<span class='duration right label'>00 00 13.664</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfully add a new Divisi</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='269' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='272' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahkanButtonToAddDivisi())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks on the Tambahkan button to add divisi</div>
+
+
+		</li>
+		<li test-id='275' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userInputsIntoTheNamaDivisiField(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User inputs "Research and Development" into the Nama Divisi field</div>
+
+
+		</li>
+		<li test-id='278' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.userClicksOnTheTambahButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks on the Tambah button</div>
+
+
+		</li>
+		<li test-id='281' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.theSuccessMessageAfterAddNewDivisiShouldDisplay(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And The success message after add new divisi should display "Berhasil Menambahkan Divisi"</div>
+
+
+		</li>
+		<li test-id='284' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.adddata.PositiveAddDivisiDefinition.theDivisiShouldBeAddedSuccessfully(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The divisi "Research and Development" should be added successfully</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='286'>
+					<div class='test-heading'>
+						<span class='test-name'>Delete Divisi - Positive Case</span>
+						<span class='test-time'>Mei 7, 2025 12:26:44 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='287' status='pass'>
+
+	<span class='duration right label'>00 00 27.621</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfully delete a Divisi</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='298' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='301' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSearchesForDivisiWithName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User searches for divisi with name "Aplication"</div>
+
+
+		</li>
+		<li test-id='304' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userClicksTheSearchButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the search button</div>
+
+
+		</li>
+		<li test-id='307' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.PositiveDeleteDivisiDefinition.userClicksTheThreeDotButtonForTheDivisi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the three dot button for the divisi "Aplication"</div>
+
+
+		</li>
+		<li test-id='310' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.PositiveDeleteDivisiDefinition.userSelectsTheDeleteOptionFromTheMenu())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User selects the delete option from the menu</div>
+
+
+		</li>
+		<li test-id='313' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.PositiveDeleteDivisiDefinition.aConfirmationPopupForDeletingDivisiShouldAppear(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then A confirmation popup for deleting divisi should appear with message containing "Aplication"</div>
+
+
+		</li>
+		<li test-id='316' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.PositiveDeleteDivisiDefinition.userConfirmsDeletionByClickingYa())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User confirms deletion by clicking Ya</div>
+
+
+		</li>
+		<li test-id='319' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.deletedata.PositiveDeleteDivisiDefinition.divisiWithNameShouldBeDeletedSuccessfully(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Divisi with name "Aplication" should be deleted successfully</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='321'>
+					<div class='test-heading'>
+						<span class='test-name'>Edit Divisi - Positive Case</span>
+						<span class='test-time'>Mei 7, 2025 12:27:12 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='322' status='pass'>
+
+	<span class='duration right label'>00 00 17.622</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfully edit an existing Divisi</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='333' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='336' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSearchesForDivisiWithName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User searches for divisi with name "Public Relations"</div>
+
+
+		</li>
+		<li test-id='339' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userClicksTheSearchButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the search button</div>
+
+
+		</li>
+		<li test-id='342' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userClicksTheThreeDotButtonForDivisi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User clicks the three dot button for divisi "Public Relations"</div>
+
+
+		</li>
+		<li test-id='345' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userClicksTheEditButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the "Edit" button</div>
+
+
+		</li>
+		<li test-id='348' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userEditsTheDivisiNameTo(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User edits the divisi name to "PR"</div>
+
+
+		</li>
+		<li test-id='351' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.userClicksTheSimpanButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the "Simpan" button</div>
+
+
+		</li>
+		<li test-id='354' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.editdata.PositiveEditDivisiDefinition.theSuccessMessageAfterEditingShouldDisplay(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then The success message after editing should display "Berhasil Edit Divisi"</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='356'>
+					<div class='test-heading'>
+						<span class='test-name'>Filtering Divisi - Positive Case</span>
+						<span class='test-time'>Mei 7, 2025 12:27:29 PM</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='357' status='pass'>
+
+	<span class='duration right label'>00 00 09.328</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successfully search for an existing divisi</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='368' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='371' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSearchesForDivisiWithName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User searches for divisi with name "Marketing Strategy"</div>
+
+
+		</li>
+		<li test-id='374' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userClicksTheSearchButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the search button</div>
+
+
+		</li>
+		<li test-id='377' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.divisiWithNameShouldBeFound(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Divisi with name "Marketing Strategy" should be found</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='379' status='pass'>
+
+	<span class='duration right label'>00 00 21.411</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Reset divisi filter</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='390' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='393' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSearchesForDivisiWithName(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User searches for divisi with name "Application Processing"</div>
+
+
+		</li>
+		<li test-id='396' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userClicksTheSearchButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the search button</div>
+
+
+		</li>
+		<li test-id='399' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userClicksTheResetButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And User clicks the reset button</div>
+
+
+		</li>
+		<li test-id='402' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.divisiWithNameShouldNotBeFound(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Divisi with name "Application Processing" should not be found</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='404' status='fail'>
+
+	<span class='duration right label'>00 00 07.335</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Select number of rows of rows per page</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='415' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.CommonSteps.userIsOnTheManagementDivisiPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on the Management Divisi page</div>
+
+
+		</li>
+		<li test-id='418' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSelectsRowsPerPage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User selects "5" rows per page</div>
+
+
+		</li>
+		<li test-id='421' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.theNumberOfRowsDisplayedShouldBe(java.lang.String))"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then The number of rows displayed should be "5"</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: The number of rows displayed does not match the expected count. expected [5] but found [6]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.theNumberOfRowsDisplayedShouldBe(PositiveFiteringDivisiDefinition.java:61)
+	at ✽.The number of rows displayed should be "5"(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/positivetest/filteringDivisiPositive.feature:19)
+</textarea>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.InvalidSelectorException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mei 7, 2025 12:24:57 PM</td>
+										<td class='linked' test-id='103'>Then An error message should appear indicating the divisi "Public Relations" already exists</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=135.0.7049.116)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2325e95c4de024128b57cffbcd7202f8, findElement {using=css selector, value=div.MuiSnackbarContent-message:contains('sudah ada')}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/vc/kxrddmpx7w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49418/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2325e95c4de024128b57cffbcd7202f8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.juaracoding.kelompok2.drivers.utils.Utils.waitUntilVisible(Utils.java:71)
+	at com.juaracoding.kelompok2.drivers.utils.Utils.isElementVisible(Utils.java:84)
+	at com.juaracoding.kelompok2.pages.divisi.AddDivisiPage.isErrorMessageDuplicateDisplayed(AddDivisiPage.java:75)
+	at com.juaracoding.kelompok2.steps.management.divisi.adddata.NegativeAddDivisiDefinition.anErrorMessageShouldAppearIndicatingTheDivisiAlreadyExists(NegativeAddDivisiDefinition.java:53)
+	at ✽.An error message should appear indicating the divisi "Public Relations" already exists(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/EditDivisiNegative.feature:22)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mei 7, 2025 12:25:32 PM</td>
+										<td class='linked' test-id='160'>Then An error message should appear indicating the divisi "Application Processing" already exists</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=135.0.7049.116)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2325e95c4de024128b57cffbcd7202f8, findElement {using=css selector, value=div.MuiSnackbarContent-message:contains('sudah ada')}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/vc/kxrddmpx7w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49418/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2325e95c4de024128b57cffbcd7202f8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at com.juaracoding.kelompok2.drivers.utils.Utils.waitUntilVisible(Utils.java:71)
+	at com.juaracoding.kelompok2.drivers.utils.Utils.isElementVisible(Utils.java:84)
+	at com.juaracoding.kelompok2.pages.divisi.AddDivisiPage.isErrorMessageDuplicateDisplayed(AddDivisiPage.java:75)
+	at com.juaracoding.kelompok2.steps.management.divisi.adddata.NegativeAddDivisiDefinition.anErrorMessageShouldAppearIndicatingTheDivisiAlreadyExists(NegativeAddDivisiDefinition.java:53)
+	at ✽.An error message should appear indicating the divisi "Public Relations" already exists(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/EditDivisiNegative.feature:22)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.NullPointerException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mei 7, 2025 12:26:19 PM</td>
+										<td class='linked' test-id='252'>When User selects "-5" rows per page</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because the return value of "com.juaracoding.kelompok2.drivers.utils.Utils.waitUntilVisible(org.openqa.selenium.WebDriver, org.openqa.selenium.By)" is null
+	at com.juaracoding.kelompok2.pages.divisi.FilteringDivisiPage.selectRowsPerPage(FilteringDivisiPage.java:48)
+	at com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.userSelectsRowsPerPage(PositiveFiteringDivisiDefinition.java:55)
+	at ✽.User selects "-5" rows per page(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/filteringDivisiNegative.feature:12)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.JavascriptException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mei 7, 2025 12:24:29 PM</td>
+										<td class='linked' test-id='69'>Then A validation message should appear for empty divisi name</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading 'validationMessage')
+  (Session info: chrome=135.0.7049.116)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2325e95c4de024128b57cffbcd7202f8, executeScript {script=return arguments[0].validationMessage;, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/vc/kxrddmpx7w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49418/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2325e95c4de024128b57cffbcd7202f8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at com.juaracoding.kelompok2.pages.divisi.EditDivisiPage.getValidationMessageOfNamaDivisi(EditDivisiPage.java:112)
+	at com.juaracoding.kelompok2.steps.management.divisi.editdata.NegativeEditDivisiDefinition.aValidationMessageShouldAppearForEmptyDivisiName(NegativeEditDivisiDefinition.java:28)
+	at ✽.A validation message should appear for empty divisi name(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/EditDivisiNegative.feature:13)
+</textarea>
+										</td>
+									</tr>
+									<tr>
+										<td>Mei 7, 2025 12:25:08 PM</td>
+										<td class='linked' test-id='129'>Then A validation message should appear for empty divisi name</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading 'validationMessage')
+  (Session info: chrome=135.0.7049.116)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.4', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2325e95c4de024128b57cffbcd7202f8, executeScript {script=return arguments[0].validationMessage;, args=[null]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 135.0.7049.116, chrome: {chromedriverVersion: 135.0.7049.42 (0f351bbd2617..., userDataDir: /var/folders/vc/kxrddmpx7w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49418}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:49418/devtoo..., se:cdpVersion: 135.0.7049.116, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2325e95c4de024128b57cffbcd7202f8
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:476)
+	at com.juaracoding.kelompok2.pages.divisi.EditDivisiPage.getValidationMessageOfNamaDivisi(EditDivisiPage.java:112)
+	at com.juaracoding.kelompok2.steps.management.divisi.editdata.NegativeEditDivisiDefinition.aValidationMessageShouldAppearForEmptyDivisiName(NegativeEditDivisiDefinition.java:28)
+	at ✽.A validation message should appear for empty divisi name(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/negativetest/EditDivisiNegative.feature:13)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mei 7, 2025 12:28:06 PM</td>
+										<td class='linked' test-id='421'>Then The number of rows displayed should be "5"</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: The number of rows displayed does not match the expected count. expected [5] but found [6]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:1419)
+	at org.testng.Assert.assertEquals(Assert.java:1383)
+	at com.juaracoding.kelompok2.steps.management.divisi.filteringdata.PositiveFiteringDivisiDefinition.theNumberOfRowsDisplayedShouldBe(PositiveFiteringDivisiDefinition.java:61)
+	at ✽.The number of rows displayed should be "5"(file:///Applications/jc-ta/oke/okee/fix/1/base%20okk/OKK%20FIX%20N/Salinan%20the-cucumber-2%202/src/test/resources/features/md/positivetest/filteringDivisiPositive.feature:19)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>8</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>15</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>88</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mei 7, 2025 12:23:53 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mei 7, 2025 12:28:07 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 04 14.848</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>user</td>
+								<td>Kelompok 2</td>
+							</tr>
+							<tr>
+								<td>version</td>
+								<td>13.6.6</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>macOS</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 8,
+				passParent: 4,
+				failParent: 4,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 15,
+				passChild: 9,
+				failChild: 6,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 88,
+				passGrandChild: 79,
+				failGrandChild: 6,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 3,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Negative Delete Divisi Test Cases":18.122,"Negative Edit Divisi Test Cases":45.542,"Negative Add Divisi Test Cases":58.025,"Negative Filtering Divisi Test Cases":34.625,"Add Divisi - Positive Case":13.664,"Delete Divisi - Positive Case":27.621,"Edit Divisi - Positive Case":17.622,"Filtering Divisi - Positive Case":38.089
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>
